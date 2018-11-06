@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4z_fjo)2*+e87#)6yf479l@17e+kd%^8f*^7p7!i1fnuvjkj)n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
@@ -77,16 +77,12 @@ WSGI_APPLICATION = 'safeVisibility.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#        'NAME': 'db_safeschool',
-#	'USER': 'anonymous',
- #       'PASSWORD': '',
-#        'HOST': 'localhost',
- #       'PORT': '',
-  #  }
-#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 # heroku settings
 #db_from_env = dj_database_url.config(conn_max_age=500)

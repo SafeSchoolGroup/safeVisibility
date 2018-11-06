@@ -7,6 +7,8 @@
   <body>
     <h1>Boards</h1>
 
-
+	{% for classe in classes %}
+      {{ classe.libelle_classe }} <br>
+    {% endfor %}
   </body>
 </html>
