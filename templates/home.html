@@ -1,11 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Boards</title>
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">	
   </head>
   <body>
-    <h1>Boards</h1>
+    <h1 class="text-primary">Boards</h1>
 
 	{% for classe in classes %}
       {{ classe.libelle_classe }} <br>

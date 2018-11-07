@@ -22,4 +22,13 @@ from visibility import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
+
+    url(r'^classe/$', views.classe_list, name='classe_list'),
+    url(r'^classe/new/$', views.new_classe, name='new_classe'),
+    url(r'^classe/show/(?P<id>\d+)/$', views.show_classe, name='show_classe'),
+
+    url(r'^etablissement/$', views.etablissement_list, name='etablissement_list'),
+    url(r'^etablissement/new/$', views.new_etablissement, name='new_etablissement'),
+    url(r'^etablissement/show/(?P<id>\d+)/$', views.show_etablissement, name='show_etablissement'),
+
 ]
