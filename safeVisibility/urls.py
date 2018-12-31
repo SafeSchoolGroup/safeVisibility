@@ -30,5 +30,6 @@ urlpatterns = [
     url(r'^etablissement/$', views.etablissement_list, name='etablissement_list'),
     url(r'^etablissement/new/$', views.new_etablissement, name='new_etablissement'),
     url(r'^etablissement/show/(?P<id>\d+)/$', views.show_etablissement, name='show_etablissement'),
+    url(r'^etablissement/search/$', views.search_etablissement, name='search_etablissement'),
 
 ]
