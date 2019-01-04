@@ -24,6 +24,10 @@ class Niveau(models.Model):
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now_add=True)
 
+	class Meta:
+		verbose_name = 'niveau'
+		verbose_name_plural = 'niveaux'
+
 	def __str__(self):
 		return self.code_niveau		
 

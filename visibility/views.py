@@ -3,7 +3,7 @@ from django.shortcuts import render,redirect
 # Create your views here.
 
 from django.http import HttpResponse,JsonResponse
-from .models import Classe,Etablissement
+from .models import Classe,Etablissement, Serie, Niveau
 from django.views.decorators.csrf import csrf_exempt
 import json
 
@@ -25,6 +25,20 @@ def etablissement_list(request):
     etablissements = list(Etablissement.objects.all().values())
 
     return JsonResponse(etablissements, safe=False) 
+
+# List Serie obj
+@csrf_exempt
+def serie_list(request):
+    series = list(Serie.objects.all().values())
+
+    return JsonResponse(series, safe=False)    
+
+# List Niveau obj
+@csrf_exempt
+def niveau_list(request):
+    niveaux = list(Niveau.objects.all().values())
+
+    return JsonResponse(niveaux, safe=False)    
 
 # Add new Classe obj
 @csrf_exempt
