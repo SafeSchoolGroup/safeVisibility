@@ -23,7 +23,7 @@ def classe_list(request):
 def etablissement_list(request):
     etablissements = Etablissement.objects.all()
 
-    return HttpResponse(etablissements) 
+    return render(request, 'etablissement_list.html', {'etablissements': etablissements})
 
 # Add new Classe obj
 @csrf_exempt
