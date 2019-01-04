@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <title>AcceuilEtablissement 1</title>
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">	
+  <link rel="stylesheet" href="{% static 'css/css_page_etablissement/style_page_etablissement.css' %}">	
+  </head>
+  <body>
+
+     <!-- <div class="boutonSpan">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>-->
+
+     <header >
+       
+       <div class="top_menu">   
+         <ul>
+            
+           <li class="li-input-search">
+            
+                <input type="text"  class="input-visibility sec" placeholder="searche sommething hear" id="header-searche-field" name="" value=""/>
+
+             
+
+           </li>
+           <li style="margin-left: -27px;">
+            
+                <i class="fas fa-search icon-searche-for-menu" onclick="toggleSideBareRecherche()" ></i>
+
+             
+
+           </li>
+
+           <li class="pull-right " style="margin-left: 20px;">
+              <i class="fas fa-phone phone-color"></i>
+             <i  class="numero">229-960-898-58</i> 
+           </li>
+           <li>
+              <a href="" class="menu-connex">se connecter</a>
+            </li>
+           
+         </ul>
+        </div>
+       
+          
+       
+      
+       <div class="row">
+         <a href="">
+            <i class="fas fa-arrow-left"></i>         </a>
+          <div class="boutonSpan col-md-6  col-sm-3" >
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+          <div class=" col-md-6  col-sm-3 div-imageSafeschool">
+            <a href="#">
+              <img src="{% static 'image/00SafeLogoOmbrée.png' %}" alt="" id="logo_safeSchool">
+            </a>
+          </div>
+         
+       </div>
+      
+       <div class="logo_tablissements">
+        
+        
+       </div>
+
+       <!-- menu2 -->
+       
+
+       <div class="container-fluid main navigation sm-wrapper">
+         <ul class="navigation_ul ">
+           <li class="active">
+             <a href="#">Accueil</a>
+           </li>
+           <li>
+            <a href="#">Classe disponible</a>
+          </li>
+          <li>
+            <a href="#">Galerie</a>
+          </li>
+          <li>
+            <a href="#">Accueil</a>
+          </li>
+          <li>
+            <a href="#">Accueil</a>
+          </li>
+          <li>
+            <a href="#">Accueil jhdvgfty</a>
+          </li>
+         </ul>
+       </div>
+       <div class="slogang">
+       <h1>
+       </h1> 
+       </div>
+
+       
+       <div class="buttun">
+         <a href="" class="btn active" >our couses</a>
+         <a href="" class="btn">learn More</a>
+       </div>
+       
+     </header>
+
+     <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script>
+     <script src="{% static 'js/bootstrap.js' %}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+ 
+     <script>
+       function toggleSideBareRecherche() {
+          document.getElementById("header-searche-field").classList.toggle("visibility");
+          document.getElementById("header-searche-field").classList.toggle("input-style");
+        }
+       
+        $(document).ready(function(){
+            $('.boutonSpan').click(function(){
+                $('.boutonSpan').toggleClass('active')
+                $('.navigation').toggleClass('active')    
+            })
+        })
+
+        $(document).ready(function(){
+            $('.sec').click(function(){
+              $('.sec').toggleClass('searche-active-input')
+                $('.li-input-search').toggleClass('searche-active-li')
+                $('.menu-connex').toggleClass('slide-right')
+                $('.numero').toggleClass('slide-right')
+                $('.phone-color').toggleClass('slide-right')
+                
+            })
+        })
+
+        
+
+
+    </script>
+        
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script>
+  </body>
+</html>

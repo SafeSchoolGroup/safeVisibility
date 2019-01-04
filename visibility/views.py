@@ -85,4 +85,17 @@ def show_etablissement(request,id):
         etablissement = Etablissement.objects.get(id=id)
 
     return HttpResponse(etablissement)    
+
+@csrf_exempt
+def page_etablissement(request):
+    return render(request, 'page_tablissement.html', {})
    
+def page_etablissements(request):
+    return render(request, 'page_tablissements.html', {})
+
+def page_connexion(request):
+    return render(request, 'page_connexion.html', {})
+   
+def page_accueil(request):
+    return render(request, 'page_accueil.html', {})
+

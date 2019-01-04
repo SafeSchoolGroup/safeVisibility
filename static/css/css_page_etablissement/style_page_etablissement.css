@@ -1,0 +1,547 @@
+* {
+   padding: 0;
+   margin: 0;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   user-select: none;
+}
+
+header > div.container-fluid.main {
+    background: #fff;
+}
+
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../../image/IMAGFER.jpeg);
+    height: 100vh;
+    /*width: 100%;*/
+    background-size: cover;
+    background-position: center;
+
+}
+header > .top_menu > ul {
+    list-style-type: none;
+    float: right;
+    margin-left: -135px;
+    
+}
+
+header >  .top_menu > ul li {
+    display: inline-block;
+    margin-top: 25px;
+    ;
+}
+.phone-color{
+    color:gray;
+} 
+
+header > .top_menu > ul li .numero{
+    color: forestgreen;
+
+}
+
+header >div.row>a>i.fas.fa-arrow-left{
+    margin-left: 10px;
+    margin-top: 30px;
+    color: honeydew;
+    
+}
+
+header >  .top_menu > ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px ;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+
+header > .top_menu > ul li a:hover{
+    background-color: #fff;
+    color:#000;
+    border-radius: 8px;
+    transition: 0.6s ease;
+}
+
+
+header >  div.container-fluid.main > ul {
+    list-style-type: none;
+    float: right;
+    /*position: fixed;*/
+
+}
+
+header > div.container-fluid.main > ul li {
+    display: inline-block;
+    margin-top: 90px;
+} 
+
+.icon-searche-for-menu{
+    color:blue;
+    z-index: 30;
+}   
+
+
+header > div.container-fluid.main > ul li a  {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px ;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: 0.6s ease;
+
+} 
+
+header >  div.container-fluid.main > ul li a:hover{
+    background-color: #fff;
+    color:#000;
+} 
+.logo_tablissements img {
+    float: left;
+     width: 150px;
+    height: auto;
+    margin-top: 23px;
+    
+    /*margin-right: 268px;*/
+} 
+.main {  
+    max-width: 1200px;
+    margin: auto;
+}
+header >  div.container-fluid.main > ul li.active a{
+    background-color: #fff;
+    color:#000;
+} 
+
+#logo_tablissements{
+    margin-left: 260px;
+ 
+}
+#logo_safeSchool{
+    width: 10%;
+    height:10%;
+    margin-left: 20px;
+    margin-top: 6px;
+    position: fixed;
+    top: 14px;
+    left: 41px;
+    /*background-color: #fff;*/
+
+}
+.div-imageSafeschool{
+    top: 16px;
+    left: 26px;
+}
+
+.slogang{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.slogang h1 {
+    color: #fff;
+    font-size: 40px;
+
+}
+.buttun {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  
+}
+.btn{
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: 5px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.6s ease;
+}
+.btn:hover{
+    background-color: #fff;
+    color:#000;
+}
+.btn.active{
+    background-color:  forestgreen;
+    color:#fff;
+    border: 1px solid forestgreen;
+
+}
+
+#header-searche-field{
+    /*padding-top: 17px;*/
+    vertical-align: center;
+    border: none;
+    width: 300px;
+    outline: none;
+    border: 1px solid #e6ecf0;
+    background-color:  #f5f8fa;
+    /*margin-left: 291px;*/
+    /*margin-top: -8px;*/
+    border-radius: 21px;
+    /*border: 1px solid #e6ecf0;
+    background-color:  #f5f8fa;*/
+    box-sizing: border-box;
+    color: #14171a;
+    display: block;
+    font-size: 12px;
+    height: 32px;
+    line-height: 16px;
+    padding: 8px 32px 8px 12px;
+    /*border: 2px solid #00aeef;*/
+    /*background: #fff;*/
+    /*transition: all .2s ease-in-out;
+    kobocollect;
+    cs entry;
+
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;*/
+
+
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:1152px) {
+    .div-imageSafeschool{
+        top: 20px;
+        left: 26px;
+    }
+
+}
+
+
+@media screen and (max-width:988px) {
+
+    #logo_safeSchool{
+        width: 12%;
+        height:12%;
+        top: 12px;
+        left: 70px;
+       /* margin-left: 20px;
+        margin-top: 6px;
+        position: fixed;
+        top: 14px;
+        left: 41px;
+        background-color: #fff;*/
+    
+    }
+   
+   
+
+
+    .boutonSpan {
+        display: block;
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+        top: 40.5px;
+        left: 11px;
+        z-index: 15;
+        box-sizing: border-box;
+        /*background-color: #000;*/
+        
+    }
+    .boutonSpan span{
+        display: block;
+        font-weight: bold;
+        margin-left: 3px;
+        margin-right: 3px;
+        margin-top: 3px;
+        margin-bottom: -10px;
+        width: 20px;
+        height: 3px;
+        background: #fff;
+        top: calc (50% - 1px);
+        left: calc (50% - 15px);
+        transition: 0.5s;
+    }
+    .boutonSpan span:nth-child(1){
+        transform: translatey(-10px);
+    }
+    
+    .boutonSpan span:nth-child(3){
+        transform: translatey(10px);
+    }
+    
+    .boutonSpan.active span:nth-child(1){
+        transform: translatey(0px) rotate(-45deg);
+        margin-bottom: -2px;
+        width: 20px;
+    }
+    
+    .boutonSpan.active span:nth-child(3){
+        transform: translatey(0px) rotate(45deg);
+        margin-bottom: 2px;
+        width: 20px;
+    }
+    
+    .boutonSpan.active span:nth-child(2){
+        transform: translatex(-30px);
+        opacity: 0;
+    }
+
+    header > div.container-fluid.main ul {
+        
+        width: 300px;
+        height: 100%;
+        position: fixed;
+        margin: 0;
+        background: rgba(0, 0, 0, 0.7);
+        top: 0px;
+        left: 0px;
+        z-index: 8;
+        float: right;
+        margin-left: -500px;
+        /*overflow-x: hidden;*/
+        /*visibility: hidden;*/
+        transition: 0.5s;
+        
+        
+    } 
+
+    header >  div.container-fluid.main.active ul{
+        margin-left: 0px;
+    }
+
+   
+
+    header >  div.container-fluid.main ul li {
+       display: block;
+       float: none;
+       margin-left: 60px;
+       margin-bottom: -55px;
+       
+       
+    } 
+
+     
+
+    header >  div.container-fluid.main > ul li a  {
+        text-decoration: none;
+        color: #fff;
+        padding: 5px 20px ;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        transition: 0.6s ease;
+    
+    }
+
+    header >  div.container-fluid.main > ul li a:after{
+        z-index: -10;
+        position: absolute;
+        left: 15%;
+        width: 0%;
+        height: 3.5%;
+        background:  hsl(185, 90%, 33%);
+        content:'' ;
+        transition: width 0.35s ease-in-out; 
+
+    }
+    header >  div.container-fluid.main > ul li a:hover:after{
+        width: 10%;
+        left: -15%;
+    } 
+    
+    header >  div.container-fluid.main > ul li a:hover{
+        background-color: #fff;
+        /*color:#000;*/
+        color: hsl(185, 90%, 33%);
+        transition: 0.35s ease-in-out;
+    } 
+    header >  div.container-fluid.main.navigation_open{
+        background-color: #fff;
+        width: 100%;
+        height: 100vh;
+        transition: 0.5px;
+    }   
+
+    /*.navigation_open {
+        width: 350px;
+        height: 100%;
+        display: block;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.7);
+        top: 0px;
+        left: 0px;
+        border-radius: 0% 1% 1% 0%;
+
+    } */
+
+    header > div.container-fluid.main.navigation_open> ul.navigation_ul {
+        visibility: visible;
+    }   
+
+    header > div.container-fluid.main > ul li.active a {
+        background-color: transparent;
+        color: #FFFFFF;
+    }
+    .input-visibility{
+        visibility: hidden;
+    }
+    
+    .input-style{
+        visibility: visible;
+    }    
+}
+@media screen and (max-width:670px) {
+    header > .top_menu > ul {
+      margin-top: 44px;
+    }
+    #logo_safeSchool{
+        width: 15%;
+        height:8%;
+        margin-left: 20px;
+        top: 10px;
+        left: 41px;
+        /*background-color: #fff;*/
+    
+    }
+    header>div.top_menu ul a {
+        margin-left: -16px;
+    }
+
+   
+
+}
+
+
+@media screen and (max-width:478px) {
+   
+   
+    header>div.top_menu ul a {
+        font-size: 12px;
+        font-weight: bold;
+        margin-left: -20px;
+    }
+
+    header>div.top_menu ul>li.pull-right>i.numero{
+        font-size: 12px;
+        font-weight: bold;
+    }
+   
+
+}
+
+/*@media screen and (max-width:420px) {
+    #header-searche-field{
+        vertical-align: center;
+        border: none;
+        width: 171px;
+      
+   
+    }
+    #logo_safeSchool{
+        width: 21%;
+        height:7%;
+        margin-left: 20px;
+        top: 20px;
+        left: 41px;
+       
+        background-color: #fff;
+    
+    }
+
+
+}*/
+
+/*@media screen and (max-width:420px) {
+   
+   
+    header>div.top_menu ul a {
+        font-size: 10px;
+        font-weight: bold;
+        margin-left: -22px;
+    }
+
+    header>div.top_menu ul>li.pull-right>i.numero{
+        font-size: 10px;
+        font-weight: bold;
+        /*margin-left: -5px;
+    }
+    #header-searche-field{
+        vertical-align: center;
+        border: none;
+        width: 200px;
+    
+    }
+    #logo_safeSchool{
+        width: 21%;
+        height:7%;
+        margin-left: 20px;
+        top: 20px;
+        left: 41px;
+       
+        /*background-color: #fff;
+    
+    }
+   
+
+}
+
+@media screen and (max-width:370px) {
+   
+   
+    header>div.top_menu ul a {
+        font-size: 10px;
+        font-weight: bold;
+        margin-left: -22px;
+    }
+
+    header>div.top_menu ul>li.pull-right>i.numero{
+        font-size: 10px;
+        font-weight: bold;
+        margin-left: -5px;
+    }
+    #header-searche-field{
+        vertical-align: center;
+        border: none;
+        width: 125px;
+        z-index: 25;
+    }
+
+    header>div.top_menu>ul> li.li-input-search.searche-active-li{
+        margin-left: 160px;
+    }
+
+    header>div.top_menu>ul> li.li-input-search.searche-active-li>input#header-searche-field.sec.searche-active-input{
+        width: 250px;
+
+    }
+
+    header>div.top_menu ul>li.pull-right>i.fas.fa-phone.phone-color.slide-right{
+        visibility: hidden;
+    }
+
+    header>div.top_menu ul>li.pull-right>i.numero.slide-right{
+        visibility: hidden;
+    }
+
+    header>div.top_menu ul>li>a.menu-connex.slide-right{
+        visibility: hidden;
+    }
+
+
+    #logo_safeSchool{
+        width: 21%;
+        height:7%;
+        margin-left: 20px;
+        top: 20px;
+        left: 41px;
+       
+        /*background-color: #fff;
+    
+    }
+   
+
+}*/
+
+
