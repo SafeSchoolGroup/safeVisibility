@@ -3,27 +3,42 @@ from django.shortcuts import render,redirect
 # Create your views here.
 
 from django.http import HttpResponse,JsonResponse
-from .models import Classe,Etablissement
+from .models import Classe,Etablissement, Serie, Niveau
 from django.views.decorators.csrf import csrf_exempt
 import json
 
 def home(request):
     classes = Classe.objects.all()
+
     return render(request, 'home.html', {'classes': classes})
 
 # List Classe obj
 @csrf_exempt
 def classe_list(request):
-    classes = Classe.objects.all()
+    classes = list(Classe.objects.all().values())
 
-    return HttpResponse(classes)
+    return JsonResponse(classes, safe=False)
 
 # List Ets obj
 @csrf_exempt
 def etablissement_list(request):
-    etablissements = Etablissement.objects.all()
+    etablissements = list(Etablissement.objects.all().values())
 
-    return HttpResponse(etablissements) 
+    return JsonResponse(etablissements, safe=False) 
+
+# List Serie obj
+@csrf_exempt
+def serie_list(request):
+    series = list(Serie.objects.all().values())
+
+    return JsonResponse(series, safe=False)    
+
+# List Niveau obj
+@csrf_exempt
+def niveau_list(request):
+    niveaux = list(Niveau.objects.all().values())
+
+    return JsonResponse(niveaux, safe=False)    
 
 # Add new Classe obj
 @csrf_exempt
@@ -32,7 +47,6 @@ def new_classe(request):
         data = json.loads(request.body.decode("utf-8"))
         code_classe = data['code_classe']
         libelle_classe = data['libelle_classe']
-        #csrfmiddlewaretoken = request.POST.get('csrfmiddlewaretoken','gjkdfjksdgjklsd')
 
         # user = User.objects.first()  
 	# TODO: get the currently logged in user
@@ -41,10 +55,9 @@ def new_classe(request):
             code_classe=code_classe,
             libelle_classe=libelle_classe,
         )
-
         return redirect('classe_list')  
-# TODO: redirect to the created topic page
-    return HttpResponse("ok")
+        
+    return JsonResponse("ok", safe=False)
 
 # Add new Etablissement obj
 @csrf_exempt
@@ -78,24 +91,22 @@ def show_classe(request,id):
 
     return HttpResponse(classe.libelle_classe)
 
+
 # Display an Etablissement obj
 @csrf_exempt
 def show_etablissement(request,id):
     if request.method == 'GET':
         etablissement = Etablissement.objects.get(id=id)
 
-    return HttpResponse(etablissement)    
+    return HttpResponse(etablissement)
 
+
+# Find an Etablissement obj(zone - statut - niveau - categorie - note)
 @csrf_exempt
-def page_etablissement(request):
-    return render(request, 'page_tablissement.html', {})
-   
-def page_etablissements(request):
-    return render(request, 'page_tablissements.html', {})
+def search_etablissement(request):
+    zone = 'Parakou'
+    statut = 'Privé'
+    if request.method == 'GET':
+        etablissement = Etablissement.objects.filter(adresse_ville=request.GET.get('zone'))| Etablissement.objects.filter(sstatut=request.GET.get('statut'))
 
-def page_connexion(request):
-    return render(request, 'page_connexion.html', {})
-   
-def page_accueil(request):
-    return render(request, 'page_accueil.html', {})
-
+    return HttpResponse(etablissement)   
