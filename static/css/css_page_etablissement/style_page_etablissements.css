@@ -1,0 +1,498 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    user-select: none;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    padding: 10px 100px;
+    z-index: 20;
+}
+
+header.white{
+ background-color: rgba(255, 255, 255, 0.97) !important;
+ height: 138px;
+ padding: 10px 100px;
+} 
+
+header.header-logo-etablissement{
+    float: left;
+}
+section>header>ul{
+    position: relative;
+    list-style: none;
+    float: right;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    top: 6px;
+} 
+
+section>header>ul li {
+    list-style: none;
+}    
+
+section>header>ul li a{
+    position: relative;
+    display: block;
+    /*line-height: 80px;*/
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 15px ;
+    border: 1px solid transparent;
+    font-weight: bold; 
+    border-radius: 8px;
+    transition: 0.6s ease;
+}  
+
+section>header>ul li a:hover{
+    background-color: #fff;
+    color:#000;
+    border-radius: 8px;
+    text-decoration: none;
+    
+}
+
+header.white ul li a{
+    color: #000;
+}
+section>header>ul li a:focus{
+    outline: none;
+}
+section>header>ul li a.active{
+    background-color: #fff;
+   
+    color:#000;
+    /*color: forestgreen;*/
+} 
+
+section>header>div.header-logo-etablissement>ul{
+    list-style: none;
+    float: right;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin-top: 10px;
+
+}  
+
+section>header>div.header-logo-etablissement>ul li{
+    list-style: none;
+}
+
+section>header>div.header-logo-etablissement>ul li a{
+    text-decoration: none;
+    
+    padding: 3px 5px ;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: 0.6s ease;
+    
+}
+section>header>div.header-logo-etablissement>ul li a.header-logo-etablissement-menuconnexion{
+    
+    color: #fff;
+    border: 1px solid transparent;
+    font-weight: bold;
+   
+} 
+
+.btn-back{
+    position: absolute;
+    top:30px;
+    left: 58px;
+    background: #00AEEF;
+    width: 30px;
+    height: 20px;
+    border-radius: 15%;
+    /*box-shadow: 0 0 15px 1px  #b6bbc0;*/
+    cursor: pointer;
+    transition: all 0.5s linear;
+    z-index: 15;
+
+}
+section>header>div.header-logo-etablissement>a.btn-back>i.fas.fa-arrow-left{
+    position: absolute;
+    top: 10px;
+    left: 13px;
+    transform: translate(-50%,-50%);
+    color:#fff;
+    font-size: 15px;
+    transition: all 0.5s linear;
+
+}
+section>header>div.header-logo-etablissement>ul> li>a> i{
+    /*color: hsl(185, 90%, 33%);*/
+    color:#00AEEF;
+    padding-right: 15px;
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+}  
+
+section>header>div.header-logo-etablissement>ul> li>a> span{
+    color:#00AEEF;
+    /*color: hsl(185, 90%, 33%);*/
+  
+}
+.serchbox{
+    position: relative;
+    
+}  
+
+.serchbox .input{
+    width: 0px;
+    background: transparent;
+    height: 35px;
+    border: 0;
+    padding: 0 35px;
+    border-radius: 50px;
+    outline: none;
+    color: #00AEEF;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.5s linear;
+    
+}   
+.searchbtn{
+    position: absolute;
+    top:0;
+    left: 9px;
+    background: #fff;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    /*box-shadow: 0 0 15px 1px  #b6bbc0;*/
+    cursor: pointer;
+    transition: all 0.5s linear;
+} 
+
+.searchbtn .fas{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:#00AEEF;
+    font-size: 17px;
+    transition: all 0.5s linear;
+
+}
+
+.searchbtn.bg-blue{
+    background: #00AEEF;
+    left: 231px;
+    width: 35px;
+    height: 35px;
+}   
+
+.searchbtn .fas.color-white{
+    color: #fff;
+}
+
+.serchbox .input.active-input{
+    width: 260px;
+    background: #fff;
+    box-shadow: 0 0 15px 1px  #b6bbc0;
+
+} 
+
+/*header>div.header-logo-etablissement>a{
+    background: #fff;
+
+}*/
+section.section-menu-top{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../../image/IMAGFER.jpeg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+#header-logo-etablissement-logoEtablissements{
+    height: 62px;
+    width: 62px;
+    margin-left: 0px;
+}  
+
+section>header>div.header-logo-etablissement>a.container-imageEtablissement{
+    position: relative;
+    
+
+}
+
+.boutongroup {
+    position: absolute;
+    top: 470px;
+    left: 630px;
+
+}
+
+section>div.boutongroup>a.btn{
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: 5px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.6s ease;
+}
+
+section>div.boutongroup>a.btn.active{
+    background-color:   #00AEEF;
+    color:#fff;
+    border: 1px solid #00AEEF;
+
+}
+
+section>div.boutongroup>a.btn:hover{
+    background-color: #fff;
+    color:#000;
+}
+
+.sloganEtablissement{
+    position: absolute;
+    top: 282px;
+    left: 460px;
+    
+
+  }
+.sloganEtablissement p{
+    position: relative;
+    color: white;
+    font-size-adjust: initial;
+    font-size: 40px;
+    line-height: 1.2em;
+    /*font-weight: bold;*/
+    font-family: 'Cookie', cursive;
+    /*text-combine-upright: 5;*/
+}   
+
+@media screen and (max-width:988px) {
+    .boutonSpan {
+        display: block;
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+        top: 39.5px;
+        left: 11px;
+        z-index: 15;
+        box-sizing: border-box;
+        /*background-color: #000;*/
+        
+    }
+    .boutonSpan span{
+        display: block;
+        font-weight: bold;
+        margin-left: 3px;
+        margin-right: 3px;
+        margin-top: 3px;
+        margin-bottom: -10px;
+        width: 20px;
+        height: 3px;
+        background: #fff;
+        top: calc (50% - 1px);
+        left: calc (50% - 15px);
+        transition: 0.5s;
+    }
+    .boutonSpan span:nth-child(1){
+        transform: translatey(-10px);
+    }
+    
+    .boutonSpan span:nth-child(3){
+        transform: translatey(10px);
+    }
+    
+    .boutonSpan.active span:nth-child(1){
+        transform: translatey(0px) rotate(-45deg);
+        margin-bottom: -2px;
+        width: 20px;
+    }
+    
+    .boutonSpan.active span:nth-child(3){
+        transform: translatey(0px) rotate(45deg);
+        margin-bottom: 2px;
+        width: 20px;
+    }
+    
+    .boutonSpan.active span:nth-child(2){
+        transform: translatex(-30px);
+        opacity: 0;
+    }
+
+    .btn-back{
+        position: absolute;
+        left: 44px;
+    
+    }
+
+    section> header>ul {
+        background: rgba(0, 0, 0, 0.7);
+        height: 100%;
+        width: 300px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        float: right;
+        z-index: 8;
+        transition: 0.5s;
+        display: block;
+        margin-left: -500px;
+    
+    } 
+    header.active >ul{
+        margin-left: 0px;
+    }
+
+    section>header >ul li {
+        display: block;
+        float: none;
+        margin-top: 83px;
+        margin-bottom: -76px;
+        margin-left: 60px;
+        
+        
+        
+     } 
+     section>header >ul> li> a:after{
+        z-index: -1;
+        position: absolute;
+        left: -15%;
+        top: 0px;
+        height: 0%;
+        width: 0%;
+        background:  hsl(185, 90%, 33%);
+        content:'' ;
+        transition: width 0.35s ease-in-out; 
+
+    }
+
+    section>header >ul> li >a:hover:after{
+        width: 15%;
+        height: 30%;
+        left: -30%;
+        top: 16px;
+    }
+
+    section>header > ul li a:hover{
+        color: hsl(185, 90%, 33%);
+        transition: 0.35s ease-in-out;
+    }
+    
+    .sloganEtablissement{
+        position: absolute;
+        top: 282px;
+        left: 200px;
+      }
+
+      .boutongroup {
+        position: absolute;
+        top: 470px;
+        left: 400px;
+    
+    }
+   
+    section>header>div.header-logo-etablissement>ul{
+        margin-top: 30px;
+    
+    }
+
+    section>header>div.header-logo-etablissement>ul li a.hiden{
+        visibility: hidden;
+    }
+
+    /*section>header>div.header-logo-etablissement>a.container-imageEtablissement{
+        position: absolute;
+        top: 20px;
+        left: 69;
+    
+    }*/
+
+    /*.btn-back{
+        position: absolute;
+        top:40px;
+        left: 45px;
+        
+    
+    }*/
+
+
+
+}
+
+@media screen and (max-width:604px) {
+    section>header>div.header-logo-etablissement.hidden-li>ul li:nth-child(1) i{
+        /*visibility: hidden;*/
+        color: transparent;
+        /*left: -500px;*/
+        transition: 0.5s;
+  
+    }
+    section>header>div.header-logo-etablissement.hidden-li>ul li:nth-child(2) span{
+        color: transparent;
+        /*left: -500px;*/
+        
+        transition: 0.5s;
+    }
+
+    section>header>div.header-logo-etablissement.hidden-li>ul li:nth-child(3) a{
+        color: transparent;
+        /*left: -500px;*/
+        transition: all 5ms ease-out;
+        
+        /*transition: 0.5s;*/
+    }
+
+    section>header>div.header-logo-etablissement>ul {
+        position: relative;
+        display: flex;
+        flex-direction: initial;
+        flex-wrap: nowrap;
+        transition: 0.5s;
+        /*background: #fff;*/
+    }
+
+    section>header>div.header-logo-etablissement>ul li {
+        position: relative;
+        /*transition: 0.5s;*/
+        transition: all 5ms ease-out
+    }
+
+    
+    .serchbox.up{
+        /*top: -73px;*/
+        /*transition: all 1s ease-out;*/
+        position: relative;
+        /*top: -73px;*/
+        /*transition: all 1s ease-out;*/
+        /*transition: none;*/
+        transition: all 5ms ease-out;
+        
+    }
+
+    
+    .searchbtn{
+        /*transition: none;*/
+        transition: all 5ms ease-out;
+        
+        /*transition: all 1s ease-out;*/
+    }
+    .serchbox{
+        position: relative;
+        transition: all 5ms ease-out;
+        
+    }  
+    
+    .serchbox .input{
+        /*transition: all 0.5s linear;
+        transition: all 1s ease-out;*/
+        transition: all 5ms ease-out;
+        
+    } 
+   
+
+}
