@@ -15,7 +15,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'safeVisibility.settings')
 
 application = get_wsgi_application()
 
-# heroku 
+# heroku ls
 #from whitenoise.django import DjangoWhiteNoise
 
 #application = DjangoWhiteNoise(application)
