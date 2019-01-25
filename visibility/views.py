@@ -110,3 +110,16 @@ def search_etablissement(request):
         etablissement = Etablissement.objects.filter(adresse_ville=request.GET.get('zone'))| Etablissement.objects.filter(sstatut=request.GET.get('statut'))
 
     return HttpResponse(etablissement)   
+
+@csrf_exempt
+def page_etablissement(request):
+    return render(request, 'page_tablissement.html', {})
+    
+def page_etablissements(request):
+    return render(request, 'page_tablissements.html', {})
+
+def page_connexion(request):
+    return render(request, 'page_connexion.html', {})
+   
+def page_accueil(request):
+    return render(request, 'page_accueil.html', {})    
