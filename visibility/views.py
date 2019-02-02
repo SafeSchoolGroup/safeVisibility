@@ -123,3 +123,7 @@ def page_connexion(request):
    
 def page_accueil(request):
     return render(request, 'page_accueil.html', {})    
+
+def page_login(request):
+    return render(request, 'page_login.html', {})    
+

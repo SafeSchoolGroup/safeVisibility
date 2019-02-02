@@ -35,6 +35,7 @@ urlpatterns = [
     url(r'^etablissements/page/2/$', views.page_etablissements, name='page_etablissements'),
     url(r'^connexion/$', views.page_connexion, name='page_connexion'),
     url(r'^accueil/$', views.page_accueil, name='page_accueil'),
+    url(r'^login/$', views.page_login, name='page_login'),
     url(r'^etablissement/search/$', views.search_etablissement, name='search_etablissement'),
 
 
