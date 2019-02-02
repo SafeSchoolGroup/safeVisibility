@@ -114,7 +114,7 @@ def search_etablissement(request):
 @csrf_exempt
 def page_etablissement(request):
     return render(request, 'page_tablissement.html', {})
-   
+    
 def page_etablissements(request):
     return render(request, 'page_tablissements.html', {})
 
