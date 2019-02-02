@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Login</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">	
+        <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Charmonman|Cookie" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="{% static 'css/css_page_login/style_page_login.css' %}">	
+    </head>
+    <body>
+        <head>
+            <nav>
+
+            </nav>
+        </head>
+        <div class="form-box">
+            <div class="left-box">
+                <h2>
+                    safeskool
+                </h2>
+                <p>
+                    Restez plus proche de vos prof/parent/tuteur/eleve/repetiteur
+                </p>
+            </div>
+            <div class="right-box">
+                <div class="div-login-info">
+                    <h2 class="login-quote"> Log in to safesKool</h2>
+                    <p class="login-quote2" > Enter your email and password to access your account</p>
+
+                </div>
+                
+                <form action="/action_page.php">
+                    <div class="form-group">
+                      <label for="email">Email address:</label>
+                      <input type="email" class="form-control login-input" id="email">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Password:</label>
+                      <input type="password" class="form-control login-input" id="pwd">
+                    </div>
+
+                    <div class="checkbox">
+                        <label><input type="checkbox"> Remember me</label>
+                    </div>
+
+                    <div class="div-forgot-password">
+                        <a href="">Mot de passe oublier?</a>
+                       
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" id="sigu-up-btn" class="btn buton-connexion">Login</button>
+                    </div>
+
+                    <dvi class="footer-login">
+                        <span class="login-footer-span">
+                            <span class="pull-left ">
+                                New membre?
+                                <a href="">Sign up!</a>
+                            </span>
+                            <span class="pull-right">
+                                <a href="">Need help?</a>
+                            </span>
+                        </span>
+                    </dvi>
+                  </form> 
+                
+            </div>
+        </div>
+    
+    </body>
+</html>

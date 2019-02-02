@@ -164,10 +164,10 @@ section>header>div.header-logo-etablissement>ul> li>a> span{
 }   
 .searchbtn{
     position: absolute;
+    background: #fff;
     top:0;
     left: 9px;
-    background: #fff;
-    width: 38px;
+    width: 33px;
     height: 38px;
     border-radius: 50%;
     /*box-shadow: 0 0 15px 1px  #b6bbc0;*/

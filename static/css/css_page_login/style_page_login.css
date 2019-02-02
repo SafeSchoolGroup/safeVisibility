@@ -1,0 +1,199 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    user-select: none;
+   
+}
+
+body{
+    /*background-color: #dfdfdf;*/
+   /* background-color:  #F5F8FA;*/
+    background-color:#F5F8FA;
+    /*background-image: linear-gradient(to bottom, #dddbd1, #d2dbdc);*/
+   
+    
+ }
+
+.form-box{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    max-width: 650px;
+    min-height: 580px;
+    padding-left: 392px;
+    margin: 64px auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+.left-box{
+    text-align: center;
+    position: absolute;
+    left: 0;
+    background: linear-gradient(30deg, #007eff,#F5F8FA);
+    height: 100%;
+    width: 275px;
+    border-radius: 3px 0 0 3px;
+    overflow: hidden;
+    clip-path: polygon(0% 0%, 90% 0, 100% 50%, 90% 100%, 0% 100%);
+}
+
+.login-input{
+    width: 320px;
+    /*border: 0px;
+    border-bottom: solid 2px #8c8c8c;
+    opacity: 0.9px;
+    border-radius: 0px;*/
+    outline: 0;
+
+}
+
+label {
+    position: relative;
+    top: -11px;
+    left: 14px;
+    cursor: pointer;
+    margin: 0;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+
+
+.form-box>div.right-box>form{
+    position: relative;
+    left: -77px;
+    top: 130px;
+   
+
+}
+
+.buton-connexion{
+    color: #fff;
+    background-color: #007eff;
+    height: 40px;
+    width: 324px;
+    /*border-radius: 15px;*/
+    
+
+}
+
+label>input[type = "checkbox"]{
+    position: relative;
+    top: 5px;
+    left: -10px;
+    width: 35px;
+    height: 15px;
+    -webkit-appearance: none;
+    background-color: #cccccc;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+    transition: .5s;
+    
+}
+
+label>input:checked[type = "checkbox"]{
+    background: #007eff; 
+}
+
+
+label>input[type = "checkbox"]::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    top: -3px;
+    left: 0;
+    background: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    transition: .5s;
+
+
+}
+
+
+label>input:checked[type = "checkbox"]::before{
+    left: 15px; 
+}
+
+.div-forgot-password{
+    position: relative;
+    top: -35px;
+    left: 205px;
+}
+
+.div-forgot-password>a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 12px;
+    font-weight: bold; 
+}
+
+.footer-login>span.login-footer-span>span.pull-left{
+    font-size: 12px;
+}
+
+.footer-login>span.login-footer-span>span.pull-left>a{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-login>span.login-footer-span>span.pull-right{
+    position: relative;
+    left: 129px;
+    font-size: 12px;
+}
+
+.footer-login>span.login-footer-span>span.pull-right a{
+    font-weight: bold;
+}
+
+.right-box>div.div-login-info{
+    position: relative;
+}
+
+.right-box>div.div-login-info>h2{
+    position: relative;
+    font-size: 30px;
+    top: 45px;
+    left: -76px;
+    font-family: 'Vollkorn', serif;
+    color: #007eff;
+
+}
+
+.right-box>div.div-login-info>p{
+    position: relative;
+    top: 75px;
+    /*color: #b2bec3;*/
+    color: #636e72;
+    /*text-align: center;*/
+    font-weight: bold;
+    font-size: 14px;
+    left: -76px;
+    font-family: 'Vollkorn', serif;  
+}
+
+.form-box>div.left-box>h2{
+    position: relative;
+    color: #fff;
+    font-family: 'Vollkorn', serif; 
+    top: 250px;
+    font-weight: bold;
+    
+}
+
+.form-box>div.left-box>p{
+    position: relative;
+    color: #fff;
+    font-family: 'Vollkorn', serif; 
+    top: 250px;
+
+}

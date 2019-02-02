@@ -114,17 +114,16 @@
                             
                         </div>
                         <div class="form-group">
-                            <label for="pwd">ConfirmPassword:</label>
+                            <label for="repwd">ConfirmPassword:</label>
                             <input type="password" class="form-control" id="form-retypepwd">
-                            <span class="error-form" id="retypepwd-erro-input"></span>
                             <i class="fas fa-check form-control-feedback error-font" id = "" ></i>
-
+                            <span class="error-form" id="retypepwd-erro-input"></span>
                         </div>
                         <div class="checkbox">
                             <label><input type="checkbox"> Remember me</label>
                         </div>
                         <div class="form-group">
-                            <button type="submit" id="sigu-up-btn" class="btn buton-connexion">creat acount</button>
+                            <button type="submit" id="sigu_up_btn" class="btn buton-connexion">creat acount</button>
                         </div>
                     </form>
                     <div class="awasome-divided-div">
@@ -234,7 +233,7 @@
                 $("#form-pwd") .focus(function() {
                 $('#pswd_info').show();
 
-            })
+            
             
             $("#form-pwd").blur(function() {
                 $('#pswd_info').hide();
@@ -259,9 +258,10 @@
             });*/
 
              $("#form-retypepwd").focusout(function(){
-                check_form-retypepwd();
+                check_form_retypepwd();
             });
 
+})
 
             function check_form_username(){
                 var pattern = /^[a-zA-Z]*$/;
@@ -287,8 +287,8 @@
                     $("#username-erro-input").html("ne dois contenir que des caractres");
                     $("#username-erro-input").show();
                     $("#form-username").css("border","1px solid #f90A0A"); 
-                    $('.error-font').removeClass('fa-check').addClass('fa-exclamation-triangle');
-                    $('.error-font').show();
+                    $("#form-username ~ .error-font").removeClass('fa-check').addClass('fa-exclamation-triangle');
+                    $("#form-username ~ .error-font").show();
                    
                     error_username = true;                   
                 }
@@ -366,8 +366,87 @@
    
             } 
 
-            function check_form_pwds(){
+            function check_form_retypepwd(){
+                var password = $("#form-pwd").val();
+                password = $.trim(password);
+                var retype_password = $("#form-retypepwd").val();
+                retype_password = $.trim(retype_password);
+                if (retype_password !== password) {
+                    $("#retypepwd-erro-input").html("Mot de passe incorrect");
+                    $("#retypepwd-erro-input").show();
+                    $("#form-retypepwd").css("border","1px solid #f90A0A"); 
+                    $("#form-retypepwd ~ .error-font").removeClass(' fa-check').addClass('fa-exclamation-triangle');
+                    $("#form-retypepwd ~ .error-font").show();
+                    error_retypepwd = true;    
+                    
+                } else if(retype_password === '') {
+                    $("#retypepwd-erro-input").html("Ce champ ne peut pas etre vide");
+                    $("#retypepwd-erro-input").show();
+                    $("#form-retypepwd").css("border","1px solid #f90A0A");
+                    $("#form-retypepwd ~ .error-font").removeClass(' fa-check').addClass('fa-exclamation-triangle');
+                    $("#form-retypepwd ~ .error-font").show();
+                    error_retypepwd = true;    
+                   
+                }else{
+                    $("#form-retypepwd ~ .error-font").removeClass('fa-exclamation-triangle').addClass('fa-check');
+                    $("#form-retypepwd ~ .error-font").show();
+                    $("#retypepwd-erro-input").hide();
+                    $("#form-retypepwd").css("border","1px solid green");
+                }
             } 
+
+
+            function check_email(){
+                var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+                var email = $("#form-email").val();
+                if(pattern.test(email) && email !== '' ){
+                    $("#form-email ~ .error-font").removeClass('fa-exclamation-triangle').addClass('fa-check');
+                    $("#form-email ~ .error-font").show();
+                    $("#email-erro-input").hide();
+                    $("#form-email").css("border","1px solid green");
+                }else if (email === ''){
+                    $("#email-erro-input").html("Ce champ ne doit pas etre vide");
+                    $("#email-erro-input").show();
+                    $("#form-email").css("border","1px solid #f90A0A");
+                    $("#form-email ~ .error-font").removeClass(' fa-check').addClass('fa-exclamation-triangle');
+                    $("#fform-email ~ .error-font").show();
+                    error_retypepwd = true;
+                }else{
+                    $("#email-erro-input").html("email incorrect");
+                    $("#email-erro-input").show();
+                    $("#form-email").css("border","1px solid #f90A0A");
+                    $("#form-email ~ .error-font").removeClass(' fa-check').addClass('fa-exclamation-triangle');
+                    $("#fform-email ~ .error-font").show();
+                    error_retypepwd = true;
+                } 
+
+            }
+
+             
+           $("#sigu_up_btn").submit(function(){
+                error_email = false;
+                error_username = false;
+                error_pwd = false;
+                error_retypepwd = false;
+
+                check_email();
+                check_form_retypepwd();
+                check_form_pwd();
+                check_form_username();
+
+                if (error_email === false && error_username === false && error_pwd === false && error_pwd === false ) {
+                     alert("Enregistrement effectue avec succes ");
+                     return true;
+                } else {
+                    alert("Reesaiyer ");
+                    return false;
+                    
+                }
+
+
+
+           });
+
         })
 
        </script>
