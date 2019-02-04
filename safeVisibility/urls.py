@@ -32,7 +32,7 @@ urlpatterns = [
     url(r'^etablissement/new/$', views.new_etablissement, name='new_etablissement'),
     url(r'^etablissement/show/(?P<id>\d+)/$', views.show_etablissement, name='show_etablissement'),
     url(r'^etablissement/search/$', views.search_etablissement, name='search_etablissement'),
-     url(r'^etablissement/page/1/$', views.page_etablissement, name='page_etablissement'),
+    url(r'^etablissement/page/1/$', views.page_etablissement, name='page_etablissement'),
     url(r'^etablissements/page/2/$', views.page_etablissements, name='page_etablissements'),
     
     url(r'^connexion/$', views.page_connexion, name='page_connexion'),
