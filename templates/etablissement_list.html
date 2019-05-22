@@ -1,22 +1,494 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+
+<head>
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>safeSchool</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/etablissement.css' %}">
-	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">	
+    <title>Liste</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/webfont/onlinewebfonts.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Charmonman|Cookie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/SimpleStarRating.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/css_page_listetablissements/etablissement.css' %}">
+
+
 </head>
-  <body>
-      
+
+<body>
+
+    <header>
+
+        <nav class="menu">
+            <div class="logo-principal" style="position: relative;">
+                <a href=""><img src="{% static 'image/00SafeLogoOmbrée.png' %}" alt="" id="logo-safe" style=" "></a>
+            </div>
+            <div class=" menu-style menu-left">
+                <ul>
+                    <li>
+                        <a href="">Accueil</a>
+                    </li>
+
+                    <li class="sub-menu" id="sub-menu-etablisement">
+                        <a href="">Etablissements</a>
+                        <ul class="sub-menu sub-menu-1 hover-dropdown">
+                            <li class="li-container-submenu">
+                                <a href="">Secondaire</a>
+                                <ul class="sub-menu-prive-ul">
+                                    <li>
+                                        <a href="" class="sub-menu-a">Prive</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Laic</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Social</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Protestant</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Catholique</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="" class="sub-menu-a">Public</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">Lycee</a>
+                                <ul class="sub-menu-lyce-ul sub-menu-lyce-univ-ul ">
+                                    <li>
+                                        <a href="">Technique</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Agricole</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Public3</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="">Universite</a>
+                                <ul class="sub-menu-universite-ul sub-menu-lyce-univ-ul">
+                                    <li>
+                                        <a href="">Faculte</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Ecole</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Institut</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Documents</a>
+                        <ul class="sub-menu sub-menu-2">
+                            <li>
+                                <a href="" class="">Memoire</a>
+                                <ul class="sub-menu-2-doc-ul">
+                                    <li>
+                                        <a href="">DTS/Licence</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Master</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Doctorat</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="">Epreuve</a>
+                                <ul class="sub-menu-2-ep-ul">
+                                    <li>
+                                        <a href="" class="sub-menu-a">Secondaire</a>
+                                        <ul class="sub-menu-2-ul">
+
+                                            <li>
+                                                <a href="">CycleI</a>
+                                            </li>
+                                            <li>
+                                                <a href="">CycleII</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="" class="sub-menu-a">Universite</a>
+                                    </li>
+
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="">Expose</a>
+                                <ul class="sub-menu-2-exp-ul">
+
+                                    <li>
+                                        <a href="" class="sub-menu-a">Secondaire</a>
+                                        <ul>
+                                            <li>
+                                                <a href="">Expose1</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Expose2</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Expose3</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a href="" class="sub-menu-a">Universite</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <div class=" menu-style menu-right">
+                <ul>
+                    <li>
+                        <a href="" class="style-prox">etablissement A proximite</a>
+                    </li>
+                    <li>
+                        <a href="" class="a-btn">
+                            connexion
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="awasome-divided-div-body-menu">
+        <div class="awasom-divider-body-menu">
+            <span>Afficher la carte</span>
+            <div class="checkboxs">
+                <label><input type="checkbox"> </label>
+                <i class="fas fa-check"></i>
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row content-body">
+            <div class="col-md-2">
+                <div class="side-bar">
+                    <div class="infoletter">
+                        <h4>Nos astuces :</h4>
+                        <p>Recevez des notifications et astuces de safesKool en ce qui concerne les classement</p>
+                    </div>
+
+                    <div class="awasome-divided-div">
+                        <div class="awasom-divider">
+
+                        </div>
+                    </div>
+
+                    <div class="notification">
+                        <div class="title">activer les notification</div>
+
+                    </div>
+
+                    <div class="checkboxt">
+                        <label><input type="checkbox"> Non</label>
+                    </div>
+                </div>
+
+                <form action="#" class="form-choice">
+                    <div class="type-info">
+                        <label for="">Type Etablissement</label>
+
+                        <div class="radio-group">
+                            <div class="row">
+                                <input type="radio" id="radio-lycee" name="opotradio" checked>
+                                <label for="radio-lycee">Lycee</label>
+                            </div>
+
+                            <div class="row">
+                                <input type="radio" id="radio-Universite" name="opotradio">
+                                <label for="radio-Universite">Université</label>
+                            </div>
+
+                            <div class="row">
+                                <input type="radio" id="radio-secondaire" name="opotradio">
+                                <label for="radio-secondaire">Secondaire</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="awasome-divided-div-footer">
+                    <div class="awasom-divider-footer">
+
+                    </div>
+                </div>
+
+                <div class="footer-info">
+                    <div class="footer-info-container">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-3 ">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="https://picsum.photos/290/180?image=0" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="name-infoE">
+                                    <h5 class="card-title">Notre DAME</h5>
+                                    <span class="name-infoE-span"> 7km</span>
+                                    <img src="{% static 'image/distance.svg' %}" alt="" id="" class="img-card-listeE">
+                                </div>
+                                <p class="listeE-card-text">Some quick example text to build on</p>
+                                <div class="rating-systeme">
+                                    <span id="myRating" class="rating" data-stars="5" data-default-rating="2" disabled > </span>15<span></span>
+                                </div>
+                                <div class="actions-buttun">
+                                    <a href="http://www.jquery2dotnet.com/" class="btn btn-outline-dark btn-sm "> Visitez la page </a>
+                                    <i class="fas fa-map-marker-alt fas-maker-map"></i>
+                                    <a href="" class="link-pageE"> Voir sur la carte</a>
+                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 ">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="https://picsum.photos/290/180?image=0" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="name-infoE">
+                                    <h5 class="card-title">Notre DAME</h5>
+                                    <span class="name-infoE-span"> 7km</span>
+                                    <img src="{% static 'image/distance.svg' %}" alt="" id="" class="img-card-listeE">
+                                </div>
+                                <p class="listeE-card-text">Some quick example text to build on</p>
+                                <div class="rating-systeme">
+                                    <span id="myRating" class="rating" data-stars="5" data-default-rating="2" disabled > </span>15<span></span>
+                                </div>
+                                <div class="actions-buttun">
+                                    <a href="http://www.jquery2dotnet.com/" class="btn btn-outline-dark btn-sm "> Visitez la page </a>
+                                    <i class="fas fa-map-marker-alt fas-maker-map"></i>
+                                    <a href="" class="link-pageE"> Voir sur la carte</a>
+                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 ">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="https://picsum.photos/290/180?image=0" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="name-infoE">
+                                    <h5 class="card-title">Cours GAMA</h5>
+                                    <span class="name-infoE-span"> 4km</span>
+                                    <img src="{% static 'image/distance.svg' %}" alt="" id="" class="img-card-listeE">
+                                </div>
+                                <p class="listeE-card-text">Some quick example text to build on</p>
+                                <div class="rating-systeme">
+                                    <span id="myRatingS" class="rating" data-stars="5" data-default-rating="2.2" disabled > </span>25<span></span>
+                                </div>
+                                <div class="actions-buttun">
+                                    <a href="http://www.jquery2dotnet.com/" class="btn btn-outline-dark btn-sm "> Visitez la page </a>
+                                    <i class="fas fa-map-marker-alt fas-maker-map"></i>
+                                    <a href="" class="link-pageE"> Voir sur la carte</a>
+                
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3 ">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="https://picsum.photos/290/180?image=0" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="name-infoE">
+                                    <h5 class="card-title">Pere Aupiais</h5>
+                                    <span class="name-infoE-span"> 8km</span>
+                                    <img src="{% static 'image/distance.svg' %}" alt="" id="" class="img-card-listeE">
+                                </div>
+                                <p class="listeE-card-text">Some quick example text to build on</p>
+                                <div class="rating-systeme">
+                                    <span id="myRatingE" class="rating" data-stars="5" data-default-rating="4.1" disabled > </span>50<span></span>
+                                </div>
+                                <div class="actions-buttun">
+                                    <a href="http://www.jquery2dotnet.com/" class="btn btn-outline-dark btn-sm "> Visitez la page </a>
+                                    <i class="fas fa-map-marker-alt fas-maker-map"></i>
+                                    <a href="" class="link-pageE"> Voir sur la carte</a>
+                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 ">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="https://picsum.photos/290/180?image=0" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="name-infoE">
+                                    <h5 class="card-title">Notre DAME</h5>
+                                    <span class="name-infoE-span"> 7km</span>
+                                    <img src="{% static 'image/distance.svg' %}" alt="" id="" class="img-card-listeE">
+                                </div>
+                                <p class="listeE-card-text">Some quick example text to build on</p>
+                                <div class="rating-systeme">
+                                    <span id="myRating" class="rating" data-stars="5" data-default-rating="2" disabled > </span>15<span></span>
+                                </div>
+                                <div class="actions-buttun">
+                                    <a href="http://www.jquery2dotnet.com/" class="btn btn-outline-dark btn-sm "> Visitez la page </a>
+                                    <i class="fas fa-map-marker-alt fas-maker-map"></i>
+                                    <a href="" class="link-pageE"> Voir sur la carte</a>
+                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 ">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="//placeimg.com/290/180/tech" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="name-infoE">
+                                    <h5 class="card-title">Notre DAME</h5>
+                                    <span class="name-infoE-span"> 7km</span>
+                                    <img src="{% static 'image/distance.svg' %}" alt="" id="" class="img-card-listeE">
+                                </div>
+                                <p class="listeE-card-text">Some quick example text to build on</p>
+                                <div class="rating-systeme">
+                                    <span id="myRating" class="rating" data-stars="5" data-default-rating="2" disabled > </span>15<span></span>
+                                </div>
+                                <div class="actions-buttun">
+                                    <a href="http://www.jquery2dotnet.com/" class="btn btn-outline-dark btn-sm "> Visitez la page </a>
+                                    <i class="fas fa-map-marker-alt fas-maker-map"></i>
+                                    <a href="" class="link-pageE"> Voir sur la carte</a>
+                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 ">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="//placeimg.com/290/180/tech" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="name-infoE">
+                                    <h5 class="card-title">Cours GAMA</h5>
+                                    <span class="name-infoE-span"> 4km</span>
+                                    <img src="{% static 'image/distance.svg' %}" alt="" id="" class="img-card-listeE">
+                                </div>
+                                <p class="listeE-card-text">Some quick example text to build on</p>
+                                <div class="rating-systeme">
+                                    <span id="myRatingS" class="rating" data-stars="5" data-default-rating="2.2" disabled > </span>25<span></span>
+                                </div>
+                                <div class="actions-buttun">
+                                    <a href="http://www.jquery2dotnet.com/" class="btn btn-outline-dark btn-sm "> Visitez la page </a>
+                                    <i class="fas fa-map-marker-alt fas-maker-map"></i>
+                                    <a href="" class="link-pageE"> Voir sur la carte</a>
+                
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3 ">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="//placeimg.com/290/180/tech" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="name-infoE">
+                                    <h5 class="card-title">Pere Aupiais</h5>
+                                    <span class="name-infoE-span"> 8km</span>
+                                    <img src="{% static 'image/distance.svg' %}" alt="" id="" class="img-card-listeE">
+                                </div>
+                                <p class="listeE-card-text">Some quick example text to build on</p>
+                                <div class="rating-systeme">
+                                    <span id="myRatingE" class="rating" data-stars="5" data-default-rating="4.1" disabled > </span>50<span></span>
+                                </div>
+                                <div class="actions-buttun">
+                                    <a href="http://www.jquery2dotnet.com/" class="btn btn-outline-dark btn-sm "> Visitez la page </a>
+                                    <i class="fas fa-map-marker-alt fas-maker-map"></i>
+                                    <a href="" class="link-pageE"> Voir sur la carte</a>
+                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
     <script src="{% static 'js/etablissement.js' %}"></script>
     <script src="{% static 'js/bootstrap.js' %}"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="{% static 'js/SimpleStarRating-master/SimpleStarRating.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
     <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script>
-  </body>
+
+    <script>
+        $(document).ready(function () {
+            $('select').niceSelect();
+
+            $('.button-advanced-search').click(function () {
+                $('.div-advanced-search').toggleClass('active-div-advanced-search')
+                $('.searchbtn-big-search-box').toggleClass("searchbtn-big-search-box-active");
+                $('.big-search-box').toggleClass("color-white");
+                $('.form-advanced-search').toggleClass('active-form-advanced-search')
+                $('.fas').toggleClass('active-fas')
+
+            })
+        })
+        var r = new SimpleStarRating(document.getElementById('myRating'));
+        var S = new SimpleStarRating(document.getElementById('myRatingS'));
+    </script>
+
+</body>
+
 </html>

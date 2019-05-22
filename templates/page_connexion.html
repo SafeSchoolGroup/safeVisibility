@@ -39,7 +39,26 @@
             </header>
         </section>
         
+        <form  action=" " class="form-choice" style="position: relative;top: 70px; left: 80px;">
+                <div class="type-info">
+                   <label for="">Type Etablissement</label>
+                </div>
 
+                <div class="row">
+                    <input type="radio" id="radio-lycee" name="one">
+                    <label for="">Lycee</label>
+                </div>
+
+                <div class="row">
+                 <input type="radio" id="radio-Universite" name="two">
+                 <label for="">Université</label>
+             </div>
+
+             <div class="row">
+                 <input type="radio" id="radio-secondaire" name="three">
+                 <label for="">Secondaire</label>
+             </div>
+             </form>
         <div class="container-fluid ">
             <div class="connexion-form-content">
 
@@ -147,6 +166,8 @@
                 </div>
             </div>
         </div>
+        
+        
 
        <script src="{% static 'js/bootstrap.js' %}"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.20/vue.js"></script>

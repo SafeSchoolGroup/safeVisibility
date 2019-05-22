@@ -82,7 +82,9 @@ section>header>nav>ul>li>a>img#logo-safe{
     min-height: 580px;
     padding-left: 392px;
     margin: 64px auto;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    /*box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);*/
     border-radius: 3px;
     background-color: #ffffff;
     z-index: -1;
@@ -95,7 +97,7 @@ div.connexion-form-content>div.form-content-left-section{
     /*background: linear-gradient(0deg, #007eff,#00aeef);*/
     height: 100%;
     width: 392px;
-    border-radius: 3px 0 0 3px;
+    /*border-radius: 3px 0 0 3px;*/
     overflow: hidden;
 
 }

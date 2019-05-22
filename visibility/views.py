@@ -127,3 +127,11 @@ def page_accueil(request):
 def page_login(request):
     return render(request, 'page_login.html', {})    
 
+def form_etablissement(request):
+    return render(request, 'form__etablissement.html', {})
+
+def liste_etablissement(request):
+    return render(request, 'etablissement_list.html', {})
+
+def base(request):
+    return render(request, 'base.html', {})
