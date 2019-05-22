@@ -31,8 +31,10 @@ urlpatterns = [
     url(r'^etablissement/$', views.etablissement_list, name='etablissement_list'),
     url(r'^etablissement/new/$', views.new_etablissement, name='new_etablissement'),
     url(r'^etablissement/show/(?P<id>\d+)/$', views.show_etablissement, name='show_etablissement'),
+    url(r'^etablissement/search/$', views.search_etablissement, name='search_etablissement'),
     url(r'^etablissement/page/1/$', views.page_etablissement, name='page_etablissement'),
     url(r'^etablissements/page/2/$', views.page_etablissements, name='page_etablissements'),
+    
     url(r'^connexion/$', views.page_connexion, name='page_connexion'),
     url(r'^accueil/$', views.page_accueil, name='page_accueil'),
     url(r'^enregistrementEtablissement/$', views.form_etablissement, name='form_etablissement'),
@@ -40,6 +42,6 @@ urlpatterns = [
     url(r'^listeetablissement/$', views.liste_etablissement, name='liste_etablissement'),
     url(r'^base/$', views.base, name='base'),
     url(r'^etablissement/search/$', views.search_etablissement, name='search_etablissement'),
-
+    url(r'^login/$', views.page_login, name='page_login')
 
 ]
